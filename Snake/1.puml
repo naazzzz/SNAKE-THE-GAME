@@ -1,0 +1,39 @@
+@startuml
+class com.company.PlayGroundWindow {
+- ResourceBundle resources
+- URL location
+- Button ButtonStart
+- RadioButton GreenSnake
+- AnchorPane MenuPane
+- ImageView SnakeBody
+- ImageView SnakeHead
+- Button again_button
+- Button back_button
+- AnchorPane gameover_pane
+- AnchorPane pane
+- TextField result_field
+- ImageView SnakeTail
+- ImageView apple
++ int LastDirection
++ int direction
++ int LastTickDirection
++ {static} int speed
+~ double positionX
+~ double positionY
+~ double posBody_X
+~ double posBody_Y
+~ double pX
+~ double pY
+~ boolean clear_zone_apple
+~ int res
+~ List<ImageView> snake_body
+~ List<Image> old_snake_body
+~ double tail_oldX
+~ double tail_oldY
+~ ImageView old_body
++ AnimationTimer at
+~ void initialize()
+~ void Move(KeyEvent)
++ void tick()
+}
+@enduml

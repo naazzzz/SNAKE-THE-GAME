@@ -1,0 +1,57 @@
+@startuml
+class com.company.PlayGroundWindow {
+- ResourceBundle resources
+- URL location
+- Button ButtonStart
+- RadioButton GreenSnake
+- AnchorPane MenuPane
+- ImageView SnakeBody
+- ImageView SnakeHead
+- Button again_button
+- Button back_button
+- AnchorPane gameover_pane
+- AnchorPane pane
+- TextField result_field
+- ImageView SnakeTail
+- ImageView apple
++ int LastDirection
++ int direction
++ int LastTickDirection
++ {static} int speed
+~ double positionX
+~ double positionY
+~ double posBody_X
+~ double posBody_Y
+~ double pX
+~ double pY
+~ boolean clear_zone_apple
+~ int res
+~ List<ImageView> snake_body
+~ List<Image> old_snake_body
+~ double tail_oldX
+~ double tail_oldY
+~ ImageView old_body
++ AnimationTimer at
+~ void initialize()
+~ void Move(KeyEvent)
++ void tick()
+}
+class com.company.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.company.MainWindow {
+- ResourceBundle resources
+- URL location
+- Button buttonExit
+- Button buttonStart
+- RadioButton speed_1
+- RadioButton speed_2
+- RadioButton speed_3
+- AnchorPane pane
+~ void initialize()
+}
+
+
+javafx.application.Application <|-- com.company.Main
+@enduml

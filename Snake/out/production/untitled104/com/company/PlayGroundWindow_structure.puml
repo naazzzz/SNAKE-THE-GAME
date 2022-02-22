@@ -1,0 +1,134 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.company.PlayGroundWindow"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_950484093 { 
+   	label=company
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   PlayGroundWindow2071347952[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PlayGroundWindow</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   ButtonStart: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   GreenSnake: RadioButton [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   LastDirection: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   LastTickDirection: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   MenuPane: AnchorPane [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   SnakeBody: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   SnakeHead: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   SnakeTail: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   apple: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   at: AnimationTimer [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   direction: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   location: URL [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   old_body: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   old_snake_body: List&lt;ImageView&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   pX: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   pY: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   pane: AnchorPane [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   posBody_X: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   posBody_Y: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   positionX: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   positionY: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   resources: ResourceBundle [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   snake_body: List&lt;ImageView&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   tail_oldX: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   tail_oldY: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># Move(event: KeyEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" ># initialize()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ tick()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+
+    
+}
+@enduml
